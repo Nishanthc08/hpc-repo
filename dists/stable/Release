@@ -1,0 +1,34 @@
+Origin: debian-hpc
+Label: debian-hpc
+Suite: stable
+Codename: stable
+Date: Tue, 27 May 2025 11:43:40 UTC
+Architectures: amd64 i386
+Components: main contrib non-free
+Description: Debian HPC Repository
+MD5Sum:
+SHA256:
+ 9fa4d02e3056aac66c3ff1849c994bf3 222 main/binary-amd64/Packages
+ d7cbe70c925733aef909c1662b0e4c0e46e127c5e675c6fbf85a684bafdfe667 222 main/binary-amd64/Packages
+ 7f0cf773d2fb5b6d5e4fd49e67b67a71 209 main/binary-amd64/Packages.gz
+ 8d4f1c0e8f7303c2726b2c5fe44183fe016bc0bc58e1278cb7fa7581847cf8cc 209 main/binary-amd64/Packages.gz
+ 93c06b25596114125fd343eac0219916 221 main/binary-i386/Packages
+ ac27cda3eee9f07fe30cd4504a2c88b48f49e720c7609fe7873c8aad55f9a50c 221 main/binary-i386/Packages
+ e4506b11fb8191898fe58decf48584c8 208 main/binary-i386/Packages.gz
+ a38e2c2c6f96392fad34342cd17d4fcc637a4abb648988e2e4ea2b4db82c55dd 208 main/binary-i386/Packages.gz
+ d41d8cd98f00b204e9800998ecf8427e 0 contrib/binary-amd64/Packages
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 contrib/binary-amd64/Packages
+ e1274275d9037fafbb709f180850f5e7 29 contrib/binary-amd64/Packages.gz
+ c83f8e85088f1f60bc8158dd1bbac2ec495e2c89a84217c038b71ff5609d648f 29 contrib/binary-amd64/Packages.gz
+ d41d8cd98f00b204e9800998ecf8427e 0 contrib/binary-i386/Packages
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 contrib/binary-i386/Packages
+ e1274275d9037fafbb709f180850f5e7 29 contrib/binary-i386/Packages.gz
+ c83f8e85088f1f60bc8158dd1bbac2ec495e2c89a84217c038b71ff5609d648f 29 contrib/binary-i386/Packages.gz
+ d41d8cd98f00b204e9800998ecf8427e 0 non-free/binary-amd64/Packages
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 non-free/binary-amd64/Packages
+ e1274275d9037fafbb709f180850f5e7 29 non-free/binary-amd64/Packages.gz
+ c83f8e85088f1f60bc8158dd1bbac2ec495e2c89a84217c038b71ff5609d648f 29 non-free/binary-amd64/Packages.gz
+ d41d8cd98f00b204e9800998ecf8427e 0 non-free/binary-i386/Packages
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 non-free/binary-i386/Packages
+ e1274275d9037fafbb709f180850f5e7 29 non-free/binary-i386/Packages.gz
+ c83f8e85088f1f60bc8158dd1bbac2ec495e2c89a84217c038b71ff5609d648f 29 non-free/binary-i386/Packages.gz

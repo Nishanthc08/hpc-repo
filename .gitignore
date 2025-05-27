@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Repository specific
+pool/*/*.deb
+dists/*/Release.gpg
+dists/*/InRelease
+logs/*.log
+
+# Web
+web/static/key.gpg
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific
+.DS_Store
+Thumbs.db

@@ -1,0 +1,27 @@
+/* Custom styles for debian-hpc repository */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+.container {
+    margin-bottom: 100px; /* Space for fixed footer */
+}
+
+pre {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}

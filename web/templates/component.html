@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1>{{ distribution }}/{{ component }}</h1>
+        
+        <div class="card mt-4">
+            <div class="card-body">
+                <h2>Available Packages</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Package</th>
+                                <th>Version</th>
+                                <th>Architecture</th>
+                                <th>Description</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for package in packages %}
+                            <tr>
+                                <td>{{ package.Package }}</td>
+                                <td>{{ package.Version }}</td>
+                                <td>{{ package.Architecture }}</td>
+                                <td>{{ package.Description }}</td>
+                                <td>
+                                    <a href="/{{ package.Filename }}" class="btn btn-sm btn-primary">Download</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-body">
+                <h2>Repository Files</h2>
+                <div class="list-group">
+                    {% for arch in architectures %}
+                    <div class="list-group-item">
+                        <h4>{{ arch }}</h4>
+                        <a href="/dists/{{ distribution }}/{{ component }}/binary-{{ arch }}/Packages" class="btn btn-sm btn-outline-primary">View Packages</a>
+                        <a href="/dists/{{ distribution }}/{{ component }}/binary-{{ arch }}/Packages.gz" class="btn btn-sm btn-outline-secondary">Download Packages.gz</a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

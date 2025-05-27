@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1>Documentation</h1>
+        
+        <div class="card mt-4">
+            <div class="card-body">
+                <h2>Repository Overview</h2>
+                <p>This is a Debian-style package repository designed for High Performance Computing packages. 
+                   It follows the standard Debian repository structure and package management practices.</p>
+                
+                <h3>Repository Structure</h3>
+                <ul>
+                    <li><strong>Distributions:</strong> stable, testing</li>
+                    <li><strong>Components:</strong> main, contrib, non-free</li>
+                    <li><strong>Architectures:</strong> amd64, i386</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-body">
+                <h2>Using the Repository</h2>
+                
+                <h3>Adding the Repository</h3>
+                <p>To add this repository to your system:</p>
+                <pre class="bg-light p-3 rounded"><code># Add the repository GPG key
+wget -qO - http://{{ request.host }}/key.gpg | sudo apt-key add -
+
+# Add the repository to your sources
+echo "deb [signed-by=/usr/share/keyrings/debian-hpc.gpg] http://{{ request.host }} stable main" | sudo tee /etc/apt/sources.list.d/debian-hpc.list
+
+# Update package lists
+sudo apt update</code></pre>
+
+                <h3>Package Installation</h3>
+                <p>Once the repository is added, you can install packages using:</p>
+                <pre class="bg-light p-3 rounded"><code>sudo apt install package-name</code></pre>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-body">
+                <h2>Security</h2>
+                <p>All packages in this repository are signed with GPG key:</p>
+                <pre class="bg-light p-3 rounded"><code>{{ gpg_key_id }}</code></pre>
+                
+                <h3>Verifying Package Signatures</h3>
+                <p>You can verify package signatures using:</p>
+                <pre class="bg-light p-3 rounded"><code>gpg --verify /path/to/package.deb.asc /path/to/package.deb</code></pre>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-body">
+                <h2>Contributing</h2>
+                <p>If you'd like to contribute packages to this repository:</p>
+                <ol>
+                    <li>Ensure your package follows Debian packaging guidelines</li>
+                    <li>Submit your package for review</li>
+                    <li>Include all necessary documentation</li>
+                    <li>Provide maintenance plan for updates</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

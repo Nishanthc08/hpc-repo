@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1>Welcome to {{ repo_name }}</h1>
+        <p class="lead">{{ repo_description }}</p>
+        
+        <h2 class="mt-4">Repository Structure</h2>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Available Distributions</h5>
+                {% for dist in distributions %}
+                <div class="mb-4">
+                    <h3>{{ dist.name }}</h3>
+                    <div class="list-group">
+                        {% for component in dist.components %}
+                        <a href="/dist/{{ dist.name }}/{{ component.name }}" class="list-group-item list-group-item-action">
+                            {{ component.name }}
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <h2 class="mt-4">Quick Start</h2>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Add this repository to your system</h5>
+                <pre class="bg-light p-3 rounded"><code># Add the repository GPG key
+wget -qO - http://{{ request.host }}/key.gpg | sudo apt-key add -
+
+# Add the repository to your sources
+echo "deb [signed-by=/usr/share/keyrings/debian-hpc.gpg] http://{{ request.host }} stable main" | sudo tee /etc/apt/sources.list.d/debian-hpc.list
+
+# Update package lists
+sudo apt update</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
